@@ -21,7 +21,7 @@ Sistem, geliştirme sürecine paralel olarak 4 ana Python modülünden oluşmakt
     *   *Problem:* Uzun hacimli belgelerin tamamının tek seferde modele özetletilmek istenmesi, modelin girdi sınırlarını (token limit) aşarak sistemin çökmesine veya eksik işlem yapmasına neden olmaktadır.
     *   *Çözüm:* `04_pdf_ozetleyici_arac.py` algoritması geliştirilerek, belgenin bütünü yerine belirli sayfa aralıklarıyla parça parça işlenmesi sağlandı. Bu modüler yaklaşım sayesinde sistem, sayfa sayısından tamamen bağımsız hale getirilerek her uzunluktaki belgeyi işleyebilir kapasiteye ulaştırıldı.
 
-## 🛠️ Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 
 *   **Büyük Dil Modeli (LLM):** Alibaba Qwen 2.5 (0.5B ve 7B)
 *   **RAG Altyapısı:** LangChain
