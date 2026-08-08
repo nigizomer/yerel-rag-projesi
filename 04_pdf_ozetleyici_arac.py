@@ -4,7 +4,7 @@ from pathlib import Path
 
 # 1. Kendi Çalışan Model Kurulumumuz (İlk kodumuzdaki gibi!)
 FoundryLocalManager.initialize(Configuration(app_name="my-app"))
-model_name = "qwen2.5-0.5b"
+model_name = "qwen2.5-7b"
 model = FoundryLocalManager.instance.catalog.get_model(model_name)
 model.load() 
 
