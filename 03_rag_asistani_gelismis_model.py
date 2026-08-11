@@ -2,7 +2,7 @@ from foundry_local_sdk import Configuration, FoundryLocalManager
 from langchain_community.vectorstores import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
-# 1. Modeli Başlat (YENİ VE ZEKİ ASİSTANIMIZ: Qwen)
+# 1. Modeli Başlatma
 FoundryLocalManager.initialize(Configuration(app_name="my-app"))
 model = FoundryLocalManager.instance.catalog.get_model("qwen2.5-7b")
 model.load()
@@ -17,7 +17,6 @@ def cevap_bul(soru):
     ilgili_parcalar = vector_db.similarity_search(soru, k=3)
     baglam = "\n\n".join([doc.page_content for doc in ilgili_parcalar])
     
-    # YENİ ASİSTAN İÇİN SİSTEM MESAJI
     sistem_mesaji = "Sen sadece sana verilen metne bakarak cevap veren bir asistansın. Metinde bilgi yoksa sadece 'BİLMİYORUM' yaz."
     
     kullanici_mesaji = f"METİN:\n{baglam}\n\nSORU: {soru}\nCEVAP:"
