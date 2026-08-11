@@ -2,7 +2,7 @@ from foundry_local_sdk import Configuration, FoundryLocalManager
 from langchain_community.document_loaders import PyPDFLoader
 from pathlib import Path
 
-# 1. Kendi Çalışan Model Kurulumumuz (İlk kodumuzdaki gibi!)
+# 1. Kendi Çalışan Model Kurulumumuz
 FoundryLocalManager.initialize(Configuration(app_name="my-app"))
 model_name = "qwen2.5-7b"
 model = FoundryLocalManager.instance.catalog.get_model(model_name)
